@@ -1,0 +1,16 @@
+<div class="centred">
+  <div class="camera">
+
+    <zxing-scanner
+      #scanner
+      [torch]="torchEnable"
+      [(device)]="currentDevice"
+      (scanSuccess)="onCodeResult($event)"
+      [formats]="scannerFormat"
+      [tryHarder]="tryHandler"
+      (permissionResponse)="onHasPermission($event)"
+      (camerasFound)="onCameraFound($event)"
+    >
+    </zxing-scanner>
+  </div>
+</div>
